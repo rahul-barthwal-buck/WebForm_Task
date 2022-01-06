@@ -34,8 +34,8 @@ namespace WebForms_Task
                         sqlCommand.Parameters.Add(new SqlParameter("@Password", customer.Password));
                         sqlCommand.Parameters.Add(new SqlParameter("@Age", customer.Age));
 
-                        int rowsDeleteCount = sqlCommand.ExecuteNonQuery();
-                        if (rowsDeleteCount != 0)
+                        int rowsInsertCount = sqlCommand.ExecuteNonQuery();
+                        if (rowsInsertCount != 0)
                             result = true;
                     }
                 }
