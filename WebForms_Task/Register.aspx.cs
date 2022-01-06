@@ -17,13 +17,8 @@ namespace WebForms_Task
         //Button Event to Insert data
         protected void Btn_Register(object sender, EventArgs e)
         {
-          
-                if (passwordCompareValidator.IsValid)
-                {
-                //If ComparePassWord Validator is Valid 
-
-                    //Created object of model class for inserting data
-                    Customer customer = new Customer();
+                 //Created object of model class for inserting data
+                   Customer customer = new Customer();
 
                 //storing values of txtbox into the members of model class
                     customer.Name = txtName.Text;
@@ -46,8 +41,6 @@ namespace WebForms_Task
                         //if returns false then print message in screen
                         lblMessage.Text = "Not Registered";
                     }
-
-                }
         }
     }
 }

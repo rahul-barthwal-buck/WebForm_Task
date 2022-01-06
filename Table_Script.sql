@@ -5,15 +5,15 @@
 
 USE [WebFormPractice]
 GO
-/****** Object:  Table [dbo].[Customer]    Script Date: 1/6/2022 5:30:21 PM ******/
-DROP TABLE IF EXISTS [dbo].[Customer]
+/****** Object:  Table [dbo].[Customers]    Script Date: 1/7/2022 1:29:59 AM ******/
+DROP TABLE IF EXISTS [dbo].[Customers]
 GO
-/****** Object:  Table [dbo].[Customer]    Script Date: 1/6/2022 5:30:21 PM ******/
+/****** Object:  Table [dbo].[Customers]    Script Date: 1/7/2022 1:29:59 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[Customer](
+CREATE TABLE [dbo].[Customers](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [nvarchar](30) NOT NULL,
 	[Mobile] [nvarchar](10) NOT NULL,
@@ -27,3 +27,4 @@ CREATE TABLE [dbo].[Customer](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
