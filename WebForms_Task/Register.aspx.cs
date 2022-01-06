@@ -23,18 +23,18 @@ namespace WebForms_Task
                 //If ComparePassWord Validator is Valid 
 
                     //Created object of model class for inserting data
-                    User user = new User();
+                    Customer customer = new Customer();
 
-                    //storing values of txtbox into the members of model class
-                    user.Name = txtName.Text;
-                    user.Mobile = (int)Convert.ToInt64(txtMobile.Text);
-                    user.Email = txtEmail.Text;
-                    user.Password = txtPassword.Text;
-                    user.Age = Convert.ToInt32(txtAge.Text);
+                //storing values of txtbox into the members of model class
+                    customer.Name = txtName.Text;
+                    customer.Mobile = (int)Convert.ToInt64(txtMobile.Text);
+                    customer.Email = txtEmail.Text;
+                    customer.Password = txtPassword.Text;
+                    customer.Age = Convert.ToInt32(txtAge.Text);
 
                     //Creating object of DbUtility to pass model class object into the Insert function
                     DbUtility db = new DbUtility();
-                    bool isInserted = db.InsertCustomer(user);
+                    bool isInserted = db.InsertCustomer(customer);
 
                     if(isInserted == true)
                     {

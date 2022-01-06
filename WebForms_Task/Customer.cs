@@ -6,7 +6,7 @@ using System.Web;
 namespace WebForms_Task
 {
     //Model class
-    public class User
+    public class Customer
     {
         public string Name { get; set; }
         public int Mobile { get; set; }

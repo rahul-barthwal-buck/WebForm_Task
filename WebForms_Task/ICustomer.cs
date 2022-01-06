@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace WebForms_Task
 {
     //Interface for Data operation methods
-    public interface IUser
+    public interface ICustomer
     {
-        bool InsertCustomer(User user);
+        bool InsertCustomer(Customer customer);
     }
 }

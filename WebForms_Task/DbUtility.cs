@@ -8,7 +8,7 @@ using System.Web;
 namespace WebForms_Task
 {
     //Here we give defintion to Methods of IUser interface methods
-    public class DbUtility:IUser
+    public class DbUtility:ICustomer
     {
         private string ConnectionString = string.Empty;
 
@@ -17,7 +17,7 @@ namespace WebForms_Task
             ConnectionString = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
         }
 
-        public bool InsertCustomer(User user)
+        public bool InsertCustomer(Customer customer)
         {
             bool result = false;
            try
@@ -28,11 +28,11 @@ namespace WebForms_Task
                     using (SqlCommand sqlCommand = new SqlCommand("sp_InsertCustomer", sqlconnection))
                     {
                         sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                        sqlCommand.Parameters.Add(new SqlParameter("@Name", user.Name));
-                        sqlCommand.Parameters.Add(new SqlParameter("@Mobile", user.Mobile));
-                        sqlCommand.Parameters.Add(new SqlParameter("@Email", user.Email));
-                        sqlCommand.Parameters.Add(new SqlParameter("@Password", user.Password));
-                        sqlCommand.Parameters.Add(new SqlParameter("@Age", user.Age));
+                        sqlCommand.Parameters.Add(new SqlParameter("@Name", customer.Name));
+                        sqlCommand.Parameters.Add(new SqlParameter("@Mobile", customer.Mobile));
+                        sqlCommand.Parameters.Add(new SqlParameter("@Email", customer.Email));
+                        sqlCommand.Parameters.Add(new SqlParameter("@Password", customer.Password));
+                        sqlCommand.Parameters.Add(new SqlParameter("@Age", customer.Age));
 
                         int rowsDeleteCount = sqlCommand.ExecuteNonQuery();
                         if (rowsDeleteCount != 0)
