@@ -17,7 +17,7 @@ namespace WebForms_Task
             ConnectionString = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
         }
 
-        public bool InsertUser(User user)
+        public bool InsertCustomer(User user)
         {
             bool result = false;
            try

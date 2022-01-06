@@ -9,6 +9,6 @@ namespace WebForms_Task
     //Interface for Data operation methods
     public interface IUser
     {
-        bool InsertUser(User user);
+        bool InsertCustomer(User user);
     }
 }

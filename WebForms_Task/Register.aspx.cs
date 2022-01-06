@@ -34,7 +34,7 @@ namespace WebForms_Task
 
                     //Creating object of DbUtility to pass model class object into the Insert function
                     DbUtility db = new DbUtility();
-                    bool isInserted = db.InsertUser(user);
+                    bool isInserted = db.InsertCustomer(user);
 
                     if(isInserted == true)
                     {
